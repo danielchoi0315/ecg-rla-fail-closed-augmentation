@@ -1,0 +1,31 @@
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+~$*
+
+# LaTeX build outputs
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Local scratch outputs
+qa_*/
+preview_tmp/
+*.Rhistory
+.RData
+
+# Regenerated local outputs are not versioned in the lean public archive
+figures/
+manuscript/
+
+# Raw ECG waveform data must not be committed here
+raw_data/
+source_waveforms/
+datasets/
+physionet/

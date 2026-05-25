@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived DOI and the associated manuscript."
+title: "Fail Closed Synthetic ECG Augmentation for External Model Validation"
+version: "1.0.0"
+date-released: "2026-05-25"
+type: software
+authors:
+  - family-names: Choi
+    given-names: Daniel
+  - family-names: Yip
+    given-names: Cordelia
+  - family-names: Choi
+    given-names: Andrew
+  - family-names: Lam
+    given-names: Quan
+  - family-names: Funk
+    given-names: Ben
+  - family-names: Park
+    given-names: Junho
+repository-code: "https://github.com/danielchoi0315/ecg-rla-fail-closed-augmentation"
+license: MIT
+keywords:
+  - electrocardiography
+  - synthetic data
+  - external validation
+  - clinical AI
+  - model governance
+  - label scarcity
+

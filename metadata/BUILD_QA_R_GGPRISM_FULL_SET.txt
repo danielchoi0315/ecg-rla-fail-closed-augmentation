@@ -1,0 +1,5 @@
+Generated: 2026-05-25 12:21:04 MDT
+Figure 1 copied from user schematic source.
+Figures 2-4 and Supplementary Figures S1-S6 regenerated in R with ggplot2 and ggprism.
+Primary manifest: 1170d044a59e4c26da0b21433d06e240c04c67ca3fc320857de7382153335e12
+Secondary manifest: 078ec0504d6026e00ec77338add2e5a0d39d76ae212a557673ea429f4e63613c

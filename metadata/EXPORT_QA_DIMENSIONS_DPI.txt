@@ -1,0 +1,21 @@
+Export QA: pixel dimensions and embedded DPI
+Root: repository root
+
+figures/journal_png	Figure2_external_multicohort_policy_validation_locked.png	8000x4400	dpi=(799.9984, 799.9984)
+figures/journal_png	Figure3_patient_any_abnormal_offline_triage_locked.png	8000x4400	dpi=(799.9984, 799.9984)
+figures/journal_png	Figure4_transportability_subgroup_stress_locked.png	8000x4400	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S1_calibration_reliability.png	7200x5200	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S2_decision_curve_analysis.png	7200x5440	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S3_target_recalibration_sensitivity.png	7040x3840	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S4_scarcity_pool_behavior.png	7600x5440	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S5_subgroup_stress_detail.png	7600x5440	dpi=(799.9984, 799.9984)
+figures/journal_png	Supplementary_Figure_S6_certification_diagnostics.png	7600x5440	dpi=(799.9984, 799.9984)
+figures/journal_tiff	Figure2_external_multicohort_policy_validation_locked.tiff	8000x4400	dpi=(800.0, 800.0)
+figures/journal_tiff	Figure3_patient_any_abnormal_offline_triage_locked.tiff	8000x4400	dpi=(800.0, 800.0)
+figures/journal_tiff	Figure4_transportability_subgroup_stress_locked.tiff	8000x4400	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S1_calibration_reliability.tiff	7200x5200	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S2_decision_curve_analysis.tiff	7200x5440	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S3_target_recalibration_sensitivity.tiff	7040x3840	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S4_scarcity_pool_behavior.tiff	7600x5440	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S5_subgroup_stress_detail.tiff	7600x5440	dpi=(800.0, 800.0)
+figures/journal_tiff	Supplementary_Figure_S6_certification_diagnostics.tiff	7600x5440	dpi=(800.0, 800.0)
