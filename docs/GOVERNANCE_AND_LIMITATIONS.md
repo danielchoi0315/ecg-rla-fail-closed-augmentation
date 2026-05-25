@@ -8,9 +8,9 @@ Key boundaries:
 - Report cells are experimental policy cells, not patients.
 - Harm rates are algorithmic performance-degradation rates over report cells.
 - Decision-curve and triage analyses are retrospective offline proxies.
+- Chapman-Shaoxing is a provenance-sensitivity analysis, not an independent secondary external cohort, because a record-level overlap audit with ECG-Arrhythmia is not included.
 - Leipzig analyses are out-of-distribution stress tests, not validation for pediatric or congenital-heart-disease clinical use.
 - Privacy and memorization audits should be added before releasing any synthetic ECG pools.
 - No raw ECG waveforms are released in this repository.
 
 This repository supports reproducibility and peer review. It should not be used for clinical decision-making.
-

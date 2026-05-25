@@ -2,7 +2,7 @@
 
 This repository contains the lean reproducibility package for the manuscript **"Fail Closed Synthetic ECG Augmentation for External Model Validation"**.
 
-The study evaluates a fail-closed certification policy for synthetic 12-lead ECG augmentation. PTB-XL is used as the development domain; ECG-Arrhythmia is the primary external validation cohort; CPSC2018, Chapman-Shaoxing, and G12EC are secondary external cohorts; Leipzig is reserved as an out-of-distribution stress test.
+The study evaluates a fail-closed certification policy for synthetic 12-lead ECG augmentation. PTB-XL is used as the development domain; ECG-Arrhythmia is the primary external validation cohort; CPSC2018 and G12EC are secondary external cohorts; Chapman-Shaoxing is retained only as a provenance-sensitivity analysis because of public-source overlap concerns with ECG-Arrhythmia provenance; Leipzig is reserved as an out-of-distribution stress test.
 
 ## What Is Included
 
@@ -63,7 +63,7 @@ This work uses public ECG resources from their original providers:
 - ECG-Arrhythmia v1.0.0
 - Leipzig Heart Center ECG-Database v1.0.0
 - CPSC2018
-- Chapman-Shaoxing / PhysioNet-Challenge-derived ECG resources
+- Chapman-Shaoxing / PhysioNet-Challenge-derived ECG resources (provenance-sensitivity analysis only)
 - G12EC / PhysioNet-Challenge-derived ECG resources
 
 Please cite and access these datasets through their original pages and publications. See `docs/DATA_SOURCES.md` for details.

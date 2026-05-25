@@ -17,10 +17,15 @@ This repository does not redistribute source ECG waveforms. The analysis used pu
 ## Secondary External Cohorts
 
 - CPSC2018
-- Chapman-Shaoxing / PhysioNet Challenge 2020-derived ECG resources
 - G12EC / PhysioNet Challenge 2020-derived ECG resources
 
 These cohorts were used for multicohort robustness analyses after the primary ECG-Arrhythmia result was locked.
+
+## Provenance-Sensitivity Cohort
+
+- Chapman-Shaoxing / PhysioNet Challenge 2020-derived ECG resources
+
+Chapman-Shaoxing is retained as a provenance-sensitivity analysis rather than an independent secondary external cohort because public source descriptions overlap conceptually with the Chapman-Shaoxing/Ningbo source family underlying ECG-Arrhythmia. The locked package does not include a record-level waveform-hash or original-patient-ID overlap audit across ECG-Arrhythmia and Chapman-Shaoxing.
 
 ## Stress Test
 
@@ -31,4 +36,3 @@ These cohorts were used for multicohort robustness analyses after the primary EC
 ## Redistribution Boundary
 
 The repository includes derived result tables and figure source files. It excludes raw ECG waveforms, source dataset files, and private identifiable information.
-

@@ -90,19 +90,19 @@ save_plot <- function(plot, stem, dir = main_dir, width = 10, height = 5.5, dpi 
 label_model <- function(x) recode(x, real_only = "Real-only", rla_selected = "RLA-selected", treat_all = "Review all", treat_none = "Review none")
 label_policy <- function(x) recode(x, baseline_rla = "Certified RLA", no_cert = "Utility-only", always_aug_r010 = "Always-on r=0.10")
 
-row_bands <- tibble(ymin = c(3.5, 1.5), ymax = c(4.5, 2.5))
-dataset_levels <- c("ECG-Arrhythmia\n(primary)", "CPSC2018", "Chapman-\nShaoxing", "G12EC")
+row_bands <- tibble(ymin = c(2.5), ymax = c(3.5))
+dataset_levels <- c("ECG-Arrhythmia\n(primary)", "CPSC2018", "G12EC")
 
 make_dot_panel <- function(data, x, xmin, xmax, title, xlab, xlim, breaks, show_y = FALSE, zero = FALSE) {
   ggplot(data, aes(y = y, color = policy, shape = policy)) +
     geom_rect(data = row_bands, aes(xmin = -Inf, xmax = Inf, ymin = ymin, ymax = ymax), inherit.aes = FALSE, fill = col["band"], color = NA) +
-    geom_hline(yintercept = c(1.5, 2.5, 3.5), color = "#E3E8EC", linewidth = 0.25) +
+    geom_hline(yintercept = c(1.5, 2.5), color = "#E3E8EC", linewidth = 0.25) +
     {if (zero) geom_vline(xintercept = 0, color = "#5E6A72", linewidth = 0.34)} +
     geom_segment(aes(x = {{ xmin }}, xend = {{ xmax }}, yend = y), linewidth = 0.56, alpha = 0.9, lineend = "round") +
     geom_point(aes(x = {{ x }}), size = 2.25, stroke = 0.2) +
     scale_y_continuous(
-      limits = c(0.55, 4.55), breaks = 4:1,
-      labels = if (show_y) dataset_levels else rep("", 4), expand = c(0, 0)
+      limits = c(0.55, 3.55), breaks = 3:1,
+      labels = if (show_y) dataset_levels else rep("", 3), expand = c(0, 0)
     ) +
     scale_x_continuous(limits = xlim, breaks = breaks, expand = expansion(mult = c(0.015, 0.025))) +
     scale_color_manual(values = policy_cols, drop = FALSE) +
@@ -112,26 +112,25 @@ make_dot_panel <- function(data, x, xmin, xmax, title, xlab, xlim, breaks, show_
     theme(axis.ticks.y = element_blank(), axis.line.y = element_blank(), panel.grid.major.y = element_blank())
 }
 
-# Figure 1: pass through the curated schematic, do not regenerate.
-fig1_src <- file.path(main_dir, "Figure1_study_design_fail_closed_certification.pdf")
-if (!file.exists(fig1_src)) {
-  warning("Figure 1 schematic is not present at: ", fig1_src)
+# Figure 1: pass through the user schematic, do not regenerate.
+fig1_src <- "D:/RLA/manuscript_NEJM_AI_20260424/output/locked_ggprism_figures_v6_userfig1_gradient_20260505/figures/final_locked/Figure1_study_design_fail_closed_certification.pdf"
+if (file.exists(fig1_src)) {
+  file.copy(fig1_src, file.path(main_dir, "Figure1_study_design_fail_closed_certification.pdf"), overwrite = TRUE)
 }
 
 # Figure 2: multicohort policy validation.
 multi <- read_csv(file.path(multi_dir, "multicohort_policy_overall_for_professional_figure.csv"), show_col_types = FALSE) %>%
+  filter(dataset != "chapman_shaoxing") %>%
   mutate(
     dataset_label = factor(case_when(
       dataset == "ecgarr" ~ "ECG-Arrhythmia\n(primary)",
       dataset == "cpsc2018" ~ "CPSC2018",
-      dataset == "chapman_shaoxing" ~ "Chapman-\nShaoxing",
       dataset == "g12ec" ~ "G12EC",
       TRUE ~ dataset
     ), levels = dataset_levels),
     y_base = as.numeric(recode(as.character(dataset_label),
-      "ECG-Arrhythmia\n(primary)" = "4",
-      "CPSC2018" = "3",
-      "Chapman-\nShaoxing" = "2",
+      "ECG-Arrhythmia\n(primary)" = "3",
+      "CPSC2018" = "2",
       "G12EC" = "1"
     )),
     policy = factor(policy, levels = c("Certified RLA", "Utility-only", "Always-on r=0.10")),
@@ -433,14 +432,13 @@ ps6c <- master %>% filter(selected_positive) %>% mutate(ratio_label = factor(rat
 ps6d <- scarcity %>% filter(policy == "Certified RLA") %>% ggplot(aes(scarcity_label, deploy_rate * 100)) + geom_col(fill = col["rla"], width = 0.58, alpha = 0.9) + labs(title = "d) Authorization by label availability", x = "Source-label availability", y = "Cells authorized (%)") + theme_pub(9.1)
 save_plot((ps6a | ps6b) / (ps6c | ps6d), "Supplementary_Figure_S6_certification_diagnostics", supp_dir, 9.5, 6.8)
 
-dir.create(file.path(root, "metadata"), recursive = TRUE, showWarnings = FALSE)
 writeLines(c(
   paste0("Generated: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
   "Figure 1 copied from user schematic source.",
   "Figures 2-4 and Supplementary Figures S1-S6 regenerated in R with ggplot2 and ggprism.",
   paste0("Primary manifest: 1170d044a59e4c26da0b21433d06e240c04c67ca3fc320857de7382153335e12"),
   paste0("Secondary manifest: ", unique(read_csv(file.path(multi_dir, "secondary_policy_overall_bootstrap.csv"), show_col_types = FALSE)$policy_manifest_sha256))
-), file.path(root, "metadata", "BUILD_QA_R_GGPRISM_FULL_SET.txt"))
+), file.path(root, "BUILD_QA_R_GGPRISM_FULL_SET.txt"))
 
 message("Completed full R/ggprism figure set at: ", root)
 
