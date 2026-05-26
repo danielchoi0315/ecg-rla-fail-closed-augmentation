@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the archived DOI and the associated manuscript."
-title: "Fail Closed Synthetic ECG Augmentation for External Model Validation"
+title: "Fail Closed Synthetic ECG Augmentation for External Clinical AI Validation"
 version: "1.0.0"
 date-released: "2026-05-25"
 type: software
@@ -26,4 +26,3 @@ keywords:
   - clinical AI
   - model governance
   - label scarcity
-

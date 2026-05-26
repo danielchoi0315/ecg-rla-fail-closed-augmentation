@@ -1,5 +1,5 @@
 {
-  "title": "Fail Closed Synthetic ECG Augmentation for External Model Validation",
+  "title": "Fail Closed Synthetic ECG Augmentation for External Clinical AI Validation",
   "upload_type": "software",
   "publication_date": "2026-05-25",
   "description": "Lean reproducibility package for a retrospective external validation study evaluating fail-closed certification of synthetic 12-lead ECG augmentation under label scarcity and external distribution shift. The archive contains locked result tables, figure-generation scripts, build metadata, and documentation. It excludes generated figure files, manuscript submission files, and source ECG waveforms.",

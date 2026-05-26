@@ -1,6 +1,6 @@
-# Fail Closed Synthetic ECG Augmentation for External Model Validation
+# Fail Closed Synthetic ECG Augmentation for External Clinical AI Validation
 
-This repository contains the lean reproducibility package for the manuscript **"Fail Closed Synthetic ECG Augmentation for External Model Validation"**.
+This repository contains the lean reproducibility package for the manuscript **"Fail Closed Synthetic ECG Augmentation for External Clinical AI Validation"**.
 
 The study evaluates a fail-closed certification policy for synthetic 12-lead ECG augmentation. PTB-XL is used as the development domain; ECG-Arrhythmia is the primary external validation cohort; CPSC2018 and G12EC are secondary external cohorts; Chapman-Shaoxing is retained only as a provenance-sensitivity analysis because of public-source overlap concerns with ECG-Arrhythmia provenance; Leipzig is reserved as an out-of-distribution stress test.
 
