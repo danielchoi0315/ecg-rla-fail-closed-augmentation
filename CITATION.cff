@@ -4,6 +4,7 @@ title: "Fail Closed Synthetic ECG Augmentation for External Clinical AI Validati
 version: "1.0.1"
 date-released: "2026-05-25"
 type: software
+doi: "10.5281/zenodo.20400510"
 authors:
   - family-names: Choi
     given-names: Daniel

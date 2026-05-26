@@ -74,4 +74,4 @@ This is a retrospective offline validation package. It does not establish prospe
 
 ## Citation
 
-If using this repository, cite the archived Zenodo DOI once available and the manuscript when published. A machine-readable citation file is provided in `CITATION.cff`.
+If using this repository, cite the archived Zenodo DOI, [10.5281/zenodo.20400510](https://doi.org/10.5281/zenodo.20400510), and the manuscript when published. A machine-readable citation file is provided in `CITATION.cff`.
